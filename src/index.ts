@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import promisePool from "./lib/db";
 import openAiSTT from "./requests/stt";
 import openAiTTS from "./requests/tts";
 
