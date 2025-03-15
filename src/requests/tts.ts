@@ -12,7 +12,7 @@ const openAiTTS = async (text: string) => {
 
   const mp3 = await openai.audio.speech.create({
     model: "tts-1",
-    voice: "nova",
+    voice: "alloy",
     input: text,
   });
 
