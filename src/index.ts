@@ -19,6 +19,9 @@ app.use(express.json());
 
 
 
+app.get("/test", async (req: any, res: Response) => {
+  return res.status(200).json({ status: "success", text: "OK" });
+})
 app.get("/api/open-token", async (req: any, res: Response) => {
 
   console.log("called", new Date().getTime())
