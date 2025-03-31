@@ -19,12 +19,10 @@ const openAiTTS = (text) => __awaiter(void 0, void 0, void 0, function* () {
     });
     // const speechFile = path.resolve("./speech.mp3");
     const mp3 = yield openai.audio.speech.create({
-        model: "tts-1",
-        voice: "nova",
+        model: "gpt-4o-mini-tts",
+        voice: "alloy",
         input: text,
     });
-    const buffer = Buffer.from(yield mp3.arrayBuffer());
-    // await fs.promises.writeFile(speechFile, buffer);
-    return buffer;
+    return mp3;
 });
 exports.default = openAiTTS;
